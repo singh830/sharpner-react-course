@@ -1,5 +1,5 @@
 import Expenseitem from "./Expenseitem";
-import card from './card';
+import card from "../UI/card";
 import './Expenses.css';
 
 
