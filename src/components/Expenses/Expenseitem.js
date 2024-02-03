@@ -7,13 +7,11 @@ import './Expenseitem.css';
 const Expenseitem = (props) => {
 
     const [title , setTitle] = useState(props.title);
-    const [amount, setAmount] = useState(props.amount);
     console.log("ExpenseItem evaluated by React");
 
 
     const clickHandler=() =>{
         setTitle('Updated!');
-        setAmount(100);
         console.log(title);
     };
        
@@ -22,7 +20,7 @@ const Expenseitem = (props) => {
             <ExpenseDate  date={props.date}/>   
             <div className="expense-item__description">
               <h2>{title}</h2>
-              <div className="expense-item__price">${amount}</div>
+              <div className="expense-item__price">${props.amount}</div>
             </div> 
             <button onClick={clickHandler}>Change Title</button>
         </Card>
